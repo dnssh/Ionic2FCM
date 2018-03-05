@@ -26,57 +26,19 @@ export class HomePage {
     this.token =JSON.stringify(this.storage.get('regid'));
 }
 
-/*notify()
-{   
-this.http.get('http://testaibot.herokuapp.com/firebase',,
-  {headers: {'Content-Type': 'application/json'} }   )
-.then(data => {
-  console.log(data.data);
-  alert(data.data);
-}).catch(error => {
-  alert(error);
-});
-}*/
+
 
 
 notify()
 {   
 
- this.http.get('http://initial99.herokuapp.com/firebase')
-// this.http.get('http://testaibot.herokuapp.com/firebase')
+ this.http.get('http://initial9.herokuapp.com/firebase')
 .map(res => res.json())
 .subscribe(data => {
         alert(data.data);
       });
-
-/*this.http.get('http://testaibot.herokuapp.com/firebase')
-.subscribe(data => {
-  this.data = data.results;
-  resolve(this.data);
-}).catch(error => {
-  alert(error);
-});*/
 }
 
-
-/* let headers = new Headers({ 'Content-Type' : 'application/json'});
-let options = new RequestOptions({ headers: headers });
-let data = JSON.stringify({
-  cardToken: token,
-  amount: 500
-});
-return new Promise((resolve, reject) => {
-  this.http.post('url', data, options)
-  .toPromise()
-  .then((response) =>
-  {console.log('API Response : ', response.json());
-    resolve(response.json()); })
-  .catch((error) =>
-  {  console.error('API Error : ', error.status);
-    console.error('API Error : ', JSON.stringify(error));
-    reject(error.json());
-  });
-});*/
  savetoken()
  { 
 //var token = this.storage.get('regid');
@@ -91,8 +53,8 @@ return new Promise((resolve, reject) => {
  
   let pos = {id:val}
     
-  this.http.post("http://initial99.herokuapp.com/fdb",pos, options)
-  //this.http.post('http://initial99.herokuapp.com/fdb',tok,{headers: {'Content-Type': 'application/json'} })
+  this.http.post("http://initial9.herokuapp.com/fdb",pos, options)
+  
   .map(res => res.json())
         .subscribe(
             data => {alert(data);},
