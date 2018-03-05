@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding align="center"><h2
+>Firebase Notification</h2>
+<br>
+  <!-- <input type="text" [(ngModel)]="token" placeholder="token" value=registration.registrationId> -->
+  <ion-input type="text" placeholder="Title" id="val"></ion-input>
+  <ion-input type="text" placeholder="Body" id="bod"></ion-input>
+  <ion-input type="text" placeholder="Body"  [(ngModel)]="token"></ion-input>
+  <br><br>
+  <button  ion-button (click)="test()">ID</button>
+  <button  ion-button (click)="savetoken()">Save ID</button>
+  <button  ion-button (click)="notify()">Notify</button>
+  <ion-card>
+  <ion-card-header>
+   
+  </ion-card-header>
+  <ion-card-content>
+<p id="demo">
+  RegId
+</p>
+<script>
+var rid=this.storage.get('regid');
+//document.getElementById("demo").innerHTML =rid;
+</script>
+  </ion-card-content>
+</ion-card>
+</ion-content>
+ 
